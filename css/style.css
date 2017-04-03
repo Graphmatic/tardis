@@ -1,79 +1,285 @@
 
+p {
+    font-family: sans-serif;
+    font-size: 0.60em;
+    padding-top: 6px;
+    line-height: 0.8em;
+    -webkit-margin-before: 0.3em;
+    -webkit-margin-after: 0.4em;
+}
+small {
+    font-family: sans-serif;
+    font-size: 0.28em;
+}
+.extra-small {
+    font-size: 0.04em;
+}
+.poster-title {
+    font-weight: bold;
+}
+.poster-advise {
+    line-height: 1em;
+}
 .blue {
     background-color: #166bff;
 }
 #contairer {
-    width: 80%;
+    width: 496px;
     margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
+#top-wrapper {
+    order: 0;
+    flex: 1 1 auto;
+
 }
 #top-border {
-    width: 496px;
+    order: 1;
+    width: 100%;
     height: 8px;
     z-index: 1;
     border: 4px solid black;
 }
 #top-frontpanel {
-    position: absolute;
-    width: 480px;
+    order: 2;
+    width: 98%;
     height: 40px;
-    z-index: 10;
+    z-index: 100;
     margin-top: -4px;
-    margin-left: 8px;
+    margin-left: 1%;
     border-left: 4px solid black;
     border-right: 4px solid black;
     border-bottom: 2px solid #0b319b;
 }
 #top-frontpanel-down {
-    position: absolute;
-    width: 480px;
+    order: 3;
+    width: 98%;
     height: 32px;
-    z-index: 10;
-    margin-top: 38px;
-    margin-left: 8px;
+    z-index: 100;
+    margin-left: 1%;
     border-left: 4px solid black;
     border-right: 4px solid black;
     border-bottom: 2px solid #0b319b;
 }
 #top-border-down {
-    width: 496px;
+    position: relative;
+    width: 100%;
     height: 8px;
-    z-index: 100;
-    margin-top: 67px;
+    z-index: -1;
+    margin-top: -4px;
     border: 4px solid black;
 }
+#top-relief-left {
+    position: absolute;
+    width: 8px;
+    height: 54px;
+    margin-top: 105px;
+    margin-left: 1px;
+    z-index: 0;
+    background: #0b319b;
+}
+#top-relief-right {
+    position: absolute;
+    width: 8px;
+    height: 54px;
+    margin-top: 105px;
+    margin-left: 496px;
+    z-index: 0;
+    background: #0b319b;
+}
+
+#middle {
+    order: 1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 760px;
+}
 #side-left-out {
-    display: inline-block;
-    width: 30px;
-    height: 680px;
+    flex-grow: 5;
+
     border-left: 4px solid black;
     margin-left: 8px;
+    z-index: 300;
 }
 #side-right-out {
-    display: inline-block;
-    width: 30px;
-    height: 680px;
+    flex-grow: 5;
     border-right: 4px solid black;
-    margin-left: -4px;
+    z-index: 300;
 }
 #side-left-in {
-    display: inline-block;
-    width: 20px;
-    height: 680px;
+    flex-grow: 2;
     border-left: 2px solid #0b319b;
     margin-left: -4px;
+    z-index: 300;
 }
 #side-right-in {
-    display: inline-block;
-    width: 20px;
-    height: 680px;
+    flex-grow: 2;
     border-right: 2px solid #0b319b;
-    margin-left: -4px;
+    z-index: 300;
 }
-#doors-wrapper {
-    display: inline-block;
-    width: 374px;
-    height: 680px;
-    margin: 0 0 0 -4px;
+#panel-wrapper {
+    order: 1;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 300;
     border-left: 2px solid #0b319b;
     border-right: 2px solid #0b319b;
+}
+#doors-wrapper {
+    order: 2;
+    flex-grow: 20;
+    display: flex;
+    flex-direction: row;
+    z-index: 300;
+    border-left: 2px solid #0b319b;
+    border-right: 2px solid #0b319b;
+}
+
+#police-panel-outer {
+    width: 96%;
+    /* height: 60px; */
+    background: #000;
+    border-radius: 4px;
+    margin: 0 1%;
+    padding: 4px;
+}
+#police-panel-white {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    background: #000;
+    border: 4px solid #ffffff;
+    border-radius: 2px;
+}
+.police {
+    margin: 5px;
+    font-family: "Avenir Next";
+    font-weight: 500;
+    line-height: 1.2em;
+    color: #ffffff;
+}
+#police-txt-left {
+    flex: 1 1 auto;
+    width: 35%;
+    text-align: center;
+}
+#police-txt-mid {
+    flex: 1 1 auto;
+    margin-top: 8px;
+    text-align: center;
+    width: 30%;
+}
+#police-txt-right {
+    flex: 1 1 auto;
+    width: 35%;
+    text-align: center;
+}
+#front-wrapper {
+    flex-grow: 17;
+    display: flex;
+    flex-direction: column;
+}
+
+#left-door {
+    flex: 2 1 47%;
+    border-top: 4px solid #082575;
+    border-left: 3px solid #0b319b;
+    border-right: 4px solid #0b319b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /*align-items: center;*/
+}
+#doors-middle-space {
+    flex: 1 1 auto;
+
+}
+#right-door {
+    flex: 2 1 47%;
+    /*width: 46%;*/
+    border-top: 4px solid #082575;
+    border-left: 4px solid #0b319b;
+    border-right: 3px solid #0b319b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /*align-items: center;*/
+}
+.door-window {
+    height: 20%;
+    border: 2px solid #0b319b;
+    margin: 18px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: 4px solid #0b319b;
+    border-style: inset;
+}
+.door-subpanel {
+    order: 1;
+    height: 20%;
+    margin: 18px;
+    border: 6px solid #0b319b;
+    border-style: inset;
+    text-align: center;
+}
+.window-glass {
+    width: 28%;
+    height: 42%;
+    margin: auto;
+    background: #ffffff;
+    border: 2px solid #0b319b;
+}
+#door-poster {
+    width: 92%;
+    height: 92%;
+    margin: auto;
+    background: #fff1d9;
+}
+#door-button-right {
+    position: relative;
+    top: 25.5%;
+    left: 3.5%;
+    z-index: 9999;
+    width: 12px;
+    height: 17px;
+    background: #0b319b;
+    border-radius: 50%;
+    border: 2px solid #afc8ff;
+}
+#door-button-left {
+    position: relative;
+    top: 25.5%;
+    left: 88.5%;
+    z-index: 9999;
+    width: 12px;
+    height: 17px;
+    background: #0b319b;
+    border-radius: 50%;
+    border: 2px solid #afc8ff;
+}
+#floor-upside {
+    order: 2;
+    width: 100%;
+    margin: -1px 0;
+    border: 4px solid #000;
+    border-bottom: 2px solid #000;
+    height: 17px;
+    transform-origin: center;
+    transform: perspective(155px) rotateX(-313deg) translateZ(5px);
+}
+#floor-front {
+    order: 3;
+    width: 100%;
+    height: 30px;
+    margin-top: -5px;
+    transform: perspective(160px) translateZ(12px);
+    border: 4px #000;
+    border-top: 2px #000;
+    border-style: solid;
 }
