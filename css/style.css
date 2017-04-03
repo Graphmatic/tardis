@@ -1,4 +1,9 @@
-
+body {
+    background: #000;
+    animation-name: overallEffect;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
 p {
     font-family: sans-serif;
     font-size: 0.60em;
@@ -28,11 +33,11 @@ small {
     margin: 50px auto;
     display: flex;
     flex-direction: column;
+
 }
 #top-wrapper {
     order: 0;
     flex: 1 1 auto;
-
 }
 #top-border {
     order: 1;
@@ -66,7 +71,6 @@ small {
     position: relative;
     width: 100%;
     height: 8px;
-    z-index: -1;
     margin-top: -4px;
     border: 4px solid black;
 }
@@ -234,11 +238,15 @@ small {
     margin: auto;
     background: #ffffff;
     border: 2px solid #0b319b;
+    animation-name: glassEffect;
+    /*animation-delay: 8s;*/
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 #door-poster {
     width: 92%;
     height: 92%;
-    margin: auto;
+    margin: 4px auto;
     background: #fff1d9;
 }
 #door-button-right {
@@ -283,3 +291,29 @@ small {
     border-top: 2px #000;
     border-style: solid;
 }
+
+/* windows fx */
+
+@keyframes glassEffect {
+    0% {
+        background: #fff1d9;
+        box-shadow: 0 0 0 #fff1d9;
+    }
+    100% {
+        background: #ffb157;
+        box-shadow: 0 0 120px #ff0035;
+    }
+}
+
+@keyframes overallEffect {
+    0% {
+        background: #000000;
+    }
+    50% {
+         background: #8f8f8f;
+     }
+    100% {
+        background: #000000;
+    }
+}
+
